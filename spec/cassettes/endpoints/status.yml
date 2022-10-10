@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.currencyapi.com/v3/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      apikey:
+      - "<API_KEY>"
+      User-Agent:
+      - Faraday v2.6.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 09 Oct 2022 15:34:27 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      cache-control:
+      - no-cache, private
+      access-control-allow-origin:
+      - "*"
+      x-ratelimit-limit-quota-minute:
+      - '10'
+      x-ratelimit-remaining-quota-minute:
+      - '10'
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2B%2FP3IKVck6ozwPVL8fbJ1cV%2F2Rx7czVUTi0M0FkglEmdRBICeBNT4zfziy4uKHQ43BvacteL%2B%2FsqTLiqqmj48o76a6%2FXspOoUTZxLzNd%2Fn3Bif9fozx6dJQ%2BWProhbYrCBGCbdiM"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 75782e34cf0a9fb6-SIN
+      content-encoding:
+      - gzip
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"quotas":{"month":{"total":300,"used":1,"remaining":299},"grace":{"total":0,"used":0,"remaining":0}}}'
+  recorded_at: Sun, 09 Oct 2022 15:34:27 GMT
+recorded_with: VCR 6.1.0
