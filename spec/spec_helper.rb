@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
-require 'currency/conversion'
+require 'vcr'
+require 'currency-conversion'
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :faraday
+  c.filter_sensitive_data('<API_KEY>') { ENV['API_KEY'] }
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -12,4 +19,8 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  # Custom settings for the client
+  config.add_setting :default_client
+  config.default_client = CurrencyConversion::Client.new(api_key: ENV['API_KEY'])
 end

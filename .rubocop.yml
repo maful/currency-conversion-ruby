@@ -6,3 +6,12 @@ AllCops:
 
 Layout/LineLength:
   Max: 120
+
+Style/FetchEnvVar:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+Naming/FileName:
+  Enabled: false
