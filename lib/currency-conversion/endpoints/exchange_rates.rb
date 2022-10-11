@@ -13,7 +13,7 @@ module CurrencyConversion
     def latest(base_currency: 'USD', currencies: nil)
       params = { base_currency: base_currency }
       params[:currencies] = currencies.join(',') if currencies.present?
-      ExchangeRates.new get_request('latest', params:)
+      ExchangeRates.new get_request('latest', params: params)
     end
   end
 end
