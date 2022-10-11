@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.currencyapi.com/v3/status
+    uri: https://api.currencyapi.com/v3/latest?base_currency=USD&currencies=IDR%2CSGD
     body:
       encoding: US-ASCII
       string: ''
@@ -17,15 +17,25 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Tue, 11 Oct 2022 01:21:26 GMT
+      - Tue, 11 Oct 2022 01:27:16 GMT
       content-type:
-      - application/json
+      - application/json; charset=UTF-8
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
+      charset:
+      - utf-8
+      x-limit:
+      - '1'
+      x-execution-time:
+      - '26.79'
       cache-control:
       - no-cache, private
+      x-ratelimit-limit-monthly-month:
+      - '300'
+      x-ratelimit-remaining-quota-month:
+      - '290'
       access-control-allow-origin:
       - "*"
       x-ratelimit-limit-quota-minute:
@@ -35,19 +45,19 @@ http_interactions:
       cf-cache-status:
       - DYNAMIC
       report-to:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FfbAgito6qQXRpVs%2BZEjb9gfXykqxVggTIeBDPAbPOXU7P4Dc3%2B4gFyV32g6nOjrvzFEvWxEowTlVPFenup2W3rMbxkxfdFxcpHjZMrF3ShGUf6DY%2FTH9qhoBABojZUfo7alT1oB"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vOqZFCGsFa3%2BuWHQrqc2lgztCeirhvFiyj2bPIhAeGM9SNukPho8Xr8ICXrFWBk%2FIFOBn%2BUFtcaILthHpUzolqlojq8UjURNsYgO9Mg27Ijgj8DISx%2FbzLPzMPP07F%2FER2Plgjsy"}],"group":"cf-nel","max_age":604800}'
       nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       server:
       - cloudflare
       cf-ray:
-      - 7583c76e5a38ab55-SIN
+      - 7583cff70e944dc8-SIN
       content-encoding:
       - gzip
       alt-svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
-      string: '{"quotas":{"month":{"total":300,"used":8,"remaining":292},"grace":{"total":0,"used":0,"remaining":0}}}'
-  recorded_at: Tue, 11 Oct 2022 01:21:27 GMT
+      encoding: UTF-8
+      string: '{"meta":{"last_updated_at":"2022-10-10T23:59:59Z"},"data":{"IDR":{"code":"IDR","value":15350.189946},"SGD":{"code":"SGD","value":1.437204}}}'
+  recorded_at: Tue, 11 Oct 2022 01:27:16 GMT
 recorded_with: VCR 6.1.0

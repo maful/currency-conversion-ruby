@@ -33,6 +33,13 @@ module CurrencyConversion
       StatusEndpoint.new(self)
     end
 
+    # Exchange Rates Endpoint instance
+    #
+    # @return [ExchangeRatesEndpoint]
+    def exchange_rates
+      ExchangeRatesEndpoint.new(self)
+    end
+
     # Initializes a new Faraday connection
     #
     # @return [Faraday::Connection]

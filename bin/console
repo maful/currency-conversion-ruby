@@ -13,6 +13,6 @@ require "currency-conversion"
 
 require "irb"
 
-@client = CurrencyConversion::Client.new(api_key: '6Zi0362H2IOkCmis4TBJ4A77Dc74sASkVU8PXMiu')
+@client = CurrencyConversion::Client.new(api_key: ENV['API_KEY'])
 
 IRB.start(__FILE__)
