@@ -19,7 +19,8 @@ Gem::Specification.new do |spec|
     "homepage_uri" => spec.homepage,
     "bug_tracker_uri" => "https://github.com/maful/currency-conversion-ruby/issues",
     "source_code_uri" => "https://github.com/maful/currency-conversion-ruby",
-    "github_repo" => "https://github.com/maful/currency-conversion-ruby"
+    "github_repo" => "https://github.com/maful/currency-conversion-ruby",
+    "rubygems_mfa_required" => "true"
   }
 
   # Specify which files should be added to the gem when it is released.
