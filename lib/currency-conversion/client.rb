@@ -51,7 +51,11 @@ module CurrencyConversion
     end
 
     def default_headers
-      { 'apikey' => api_key }
+      { 'apikey' => api_key, 'User-Agent' => user_agent }
+    end
+
+    def user_agent
+      @user_agent ||= "currency-conversion/#{CurrencyConversion::VERSION}"
     end
   end
 end
