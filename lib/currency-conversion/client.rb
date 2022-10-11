@@ -33,6 +33,13 @@ module CurrencyConversion
       StatusEndpoint.new(self)
     end
 
+    # Exchange Rates Endpoint instance
+    #
+    # @return [ExchangeRatesEndpoint]
+    def exchange_rates
+      ExchangeRatesEndpoint.new(self)
+    end
+
     # Initializes a new Faraday connection
     #
     # @return [Faraday::Connection]
@@ -51,7 +58,11 @@ module CurrencyConversion
     end
 
     def default_headers
-      { 'apikey' => api_key }
+      { 'apikey' => api_key, 'User-Agent' => user_agent }
+    end
+
+    def user_agent
+      @user_agent ||= "currency-conversion/#{CurrencyConversion::VERSION}"
     end
   end
 end

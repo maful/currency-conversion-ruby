@@ -11,8 +11,8 @@ RSpec.describe CurrencyConversion::StatusEndpoint do
 
       quotas = response.quotas
       expect(quotas.month.total).to eq(300)
-      expect(quotas.month.used).to eq(1)
-      expect(quotas.month.remaining).to eq(299)
+      expect(quotas.month.used).to eq(8)
+      expect(quotas.month.remaining).to eq(292)
     end
   end
   # rubocop:enable RSpec/ExampleLength, RSpec/MultipleExpectations

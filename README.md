@@ -39,6 +39,18 @@ quotas.month.total
 # => 300
 ```
 
+### Latest Exchange Rates
+
+```ruby
+response = client.exchange_rates.latest(base_currency: 'USD', currencies: ['IDR', 'EUR'])
+response.body
+# => {"meta"=>{"last_updated_at"=>"2022-10-10T23:59:59Z"}, "data"=>{"EUR"=>{"code"=>"EUR", "value"=>1.029906}, "IDR"=>{"code"=>"IDR", "value"=>15350.189946}}}
+response.meta
+# => {"last_updated_at"=>"2022-10-10T23:59:59Z"}
+response.last_updated_at
+# => "2022-10-10T23:59:59Z"
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
