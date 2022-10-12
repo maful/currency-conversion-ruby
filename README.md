@@ -39,6 +39,45 @@ quotas.month.total
 # => 300
 ```
 
+### List available currencies
+
+```ruby
+response = client.currencies.retrieve
+response.data
+# =>
+# {"AED"=>
+#   {"symbol"=>"AED",
+#    "name"=>"United Arab Emirates Dirham",
+#    "symbol_native"=>"د.إ",
+#    "decimal_digits"=>2,
+#    "rounding"=>0,
+#    "code"=>"AED",
+#    "name_plural"=>"UAE dirhams"},
+# {...}
+# }
+
+# retrieve specific currencies
+response = client.currencies.retrieve(currencies: ['IDR', 'SGD'])
+response.data
+# =>
+# {"IDR"=>
+#   {"symbol"=>"Rp",
+#    "name"=>"Indonesian Rupiah",
+#    "symbol_native"=>"Rp",
+#    "decimal_digits"=>0,
+#    "rounding"=>0,
+#    "code"=>"IDR",
+#    "name_plural"=>"Indonesian rupiahs"},
+#  "SGD"=>
+#   {"symbol"=>"S$",
+#    "name"=>"Singapore Dollar",
+#    "symbol_native"=>"$",
+#    "decimal_digits"=>2,
+#    "rounding"=>0,
+#    "code"=>"SGD",
+#    "name_plural"=>"Singapore dollars"}}
+```
+
 ### Latest Exchange Rates
 
 ```ruby

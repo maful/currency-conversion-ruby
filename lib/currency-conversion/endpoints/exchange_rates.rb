@@ -1,4 +1,6 @@
-require "active_support/core_ext/object/blank"
+# frozen_string_literal: true
+
+require 'active_support/core_ext/object/blank'
 
 module CurrencyConversion
   # Latest Exchange Rates Endpoint

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module CurrencyConversion
-  # ExchangeRates
-  class ExchangeRates
+  # Currencies
+  class Currencies
     # @return [Hash] The response body
     attr_reader :body
 
@@ -16,14 +16,6 @@ module CurrencyConversion
 
     def data
       body['data']
-    end
-
-    def meta
-      body['meta']
-    end
-
-    def last_updated_at
-      meta['last_updated_at']
     end
   end
 end
