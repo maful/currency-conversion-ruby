@@ -33,6 +33,13 @@ module CurrencyConversion
       StatusEndpoint.new(self)
     end
 
+    # Currencies Endpoint instance
+    #
+    # @return [CurrenciesEndpoint]
+    def currencies
+      CurrenciesEndpoint.new(self)
+    end
+
     # Exchange Rates Endpoint instance
     #
     # @return [ExchangeRatesEndpoint]

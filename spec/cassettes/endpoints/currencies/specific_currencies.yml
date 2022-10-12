@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.currencyapi.com/v3/currencies?currencies=IDR%2CSGD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      apikey:
+      - "<API_KEY>"
+      User-Agent:
+      - currency-conversion/0.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 12 Oct 2022 00:20:47 GMT
+      content-type:
+      - application/json; charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      charset:
+      - utf-8
+      x-limit:
+      - '1'
+      x-execution-time:
+      - '21.34'
+      cache-control:
+      - no-cache, private
+      x-ratelimit-limit-monthly-month:
+      - '300'
+      x-ratelimit-remaining-quota-month:
+      - '283'
+      access-control-allow-origin:
+      - "*"
+      x-ratelimit-limit-quota-minute:
+      - '10'
+      x-ratelimit-remaining-quota-minute:
+      - '10'
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=P1JZLuh8FgShepFM%2BsljYVZ1Yux7ABhbrANfY8o8AF2wPTPVPL9tlhNkvxpND3HECj%2FD9aAXYIic8DiDBVg3ulzg2z327E6DK3GtHqw8xV7fjrUF7W5TvtU2wv3c7AYmJPqMYKjj"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 758babf34e389e3b-SIN
+      content-encoding:
+      - gzip
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"data":{"IDR":{"symbol":"Rp","name":"Indonesian Rupiah","symbol_native":"Rp","decimal_digits":0,"rounding":0,"code":"IDR","name_plural":"Indonesian
+        rupiahs"},"SGD":{"symbol":"S$","name":"Singapore Dollar","symbol_native":"$","decimal_digits":2,"rounding":0,"code":"SGD","name_plural":"Singapore
+        dollars"}}}'
+  recorded_at: Wed, 12 Oct 2022 00:20:47 GMT
+recorded_with: VCR 6.1.0
