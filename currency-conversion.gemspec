@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "currency-conversion/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "currency-conversion"
+  spec.name = "currency-conversion-api"
   spec.version = CurrencyConversion::VERSION
   spec.authors = ["maful"]
   spec.email = ["mafulprayoga@gmail.com"]

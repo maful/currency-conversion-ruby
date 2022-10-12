@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    currency-conversion (0.1.0)
+    currency-conversion-api (0.1.0)
       activesupport (~> 6.1)
       faraday (~> 2.6)
 
@@ -74,7 +74,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug (~> 11.1)
-  currency-conversion!
+  currency-conversion-api!
   rake (~> 13.0)
   rspec (~> 3.11)
   rubocop (~> 1.36)
