@@ -78,7 +78,16 @@ response.data
 #    "name_plural"=>"Singapore dollars"}}
 ```
 
-### Latest Exchange Rates
+### Exchange Rates
+
+### Convert Exchange Rates
+
+```ruby
+response = @client.exchange_rates.convert(value: 10, currencies: %w[IDR EUR], date: Date.new(2022,10,11))
+response.data
+```
+
+#### Latest Exchange Rates
 
 ```ruby
 response = client.exchange_rates.latest(base_currency: 'USD', currencies: ['IDR', 'EUR'])
