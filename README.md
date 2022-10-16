@@ -83,20 +83,30 @@ response.data
 ### Convert Exchange Rates
 
 ```ruby
-response = @client.exchange_rates.convert(value: 10, currencies: %w[IDR EUR], date: Date.new(2022,10,11))
+response = @client.exchange_rates.convert(value: 10, currencies: %w[IDR EUR], date: Date.new(2022, 10, 11))
 response.data
 ```
 
 #### Latest Exchange Rates
 
 ```ruby
-response = client.exchange_rates.latest(base_currency: 'USD', currencies: ['IDR', 'EUR'])
+response = client.exchange_rates.latest(base_currency: 'USD', currencies: %w[IDR EUR])
 response.body
 # => {"meta"=>{"last_updated_at"=>"2022-10-10T23:59:59Z"}, "data"=>{"EUR"=>{"code"=>"EUR", "value"=>1.029906}, "IDR"=>{"code"=>"IDR", "value"=>15350.189946}}}
 response.meta
 # => {"last_updated_at"=>"2022-10-10T23:59:59Z"}
 response.last_updated_at
 # => "2022-10-10T23:59:59Z"
+```
+
+#### Historical Exchange Rates
+
+```ruby
+response = client.exchange_rates.historical(date: Date.new(2022, 6, 6), currencies: %w[SGD IDR])
+response.data
+# => {"IDR"=>{"code"=>"IDR", "value"=>14438.00731}, "SGD"=>{"code"=>"SGD", "value"=>1.37705}}
+response.last_updated_at
+# => "2022-06-06T23:59:59Z"
 ```
 
 ## Development
