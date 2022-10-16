@@ -23,7 +23,7 @@ Or install it yourself as:
 
 Create a new client, grab the API key on [Currency Conversion API](https://currencyapi.com/) website.
 
-[API Documentation](https://rubydoc.info/gems/versafleet)
+[API Documentation](https://rubydoc.info/gems/currency-conversion-api)
 
 ```ruby
 client = CurrencyConversion::Client.new(api_key: ENV['API_KEY'])
