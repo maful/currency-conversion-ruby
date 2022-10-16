@@ -1,13 +1,14 @@
 # CurrencyAPI
 
 [![Test](https://github.com/maful/currency-conversion-ruby/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/maful/currency-conversion-ruby/actions/workflows/test.yml)
+[![Gem Version](https://badge.fury.io/rb/currency-conversion-api.svg)](https://badge.fury.io/rb/currency-conversion-api)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'currency-conversion'
+gem 'currency-conversion-api'
 ```
 
 And then execute:
@@ -16,11 +17,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install currency-conversion
+    $ gem install currency-conversion-api
 
 ## Usage
 
 Create a new client, grab the API key on [Currency Conversion API](https://currencyapi.com/) website.
+
+[API Documentation](https://rubydoc.info/gems/currency-conversion-api)
 
 ```ruby
 client = CurrencyConversion::Client.new(api_key: ENV['API_KEY'])
@@ -80,10 +83,10 @@ response.data
 
 ### Exchange Rates
 
-### Convert Exchange Rates
+#### Convert Exchange Rates
 
 ```ruby
-response = @client.exchange_rates.convert(value: 10, currencies: %w[IDR EUR], date: Date.new(2022, 10, 11))
+response = client.exchange_rates.convert(value: 10, currencies: %w[IDR EUR], date: Date.new(2022, 10, 11))
 response.data
 ```
 
