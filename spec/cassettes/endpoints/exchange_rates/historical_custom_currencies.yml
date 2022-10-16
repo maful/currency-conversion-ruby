@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.currencyapi.com/v3/historical?base_currency=SGD&currencies=IDR%2CMYR&date=2022-07-07
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      apikey:
+      - "<API_KEY>"
+      User-Agent:
+      - currency-conversion/0.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 16 Oct 2022 08:22:50 GMT
+      content-type:
+      - application/json; charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      charset:
+      - utf-8
+      x-limit:
+      - '1'
+      x-execution-time:
+      - '45.57'
+      cache-control:
+      - no-cache, private
+      x-ratelimit-limit-monthly-month:
+      - '300'
+      x-ratelimit-remaining-quota-month:
+      - '279'
+      access-control-allow-origin:
+      - "*"
+      x-ratelimit-limit-quota-minute:
+      - '10'
+      x-ratelimit-remaining-quota-minute:
+      - '10'
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TfZnrF0xL%2FbBovsy9itH5hdUBsGKHWggmRqmclKjL1pCqHtsiA2HF4T0HAVZiZQGTzdpy8Kw5z%2FmQZoWd1xMQUcrbGo9Bozr0pJg2lu%2BE1qPi3u6uvRlwnvzvcONfsfKSbe9Uk3d5mduLahYJEX6iQIe"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 75af6391fba39e32-SIN
+      content-encoding:
+      - gzip
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"last_updated_at":"2022-07-07T23:59:59Z"},"data":{"IDR":{"code":"IDR","value":10686.726107},"MYR":{"code":"MYR","value":3.162197}}}'
+  recorded_at: Sun, 16 Oct 2022 08:22:50 GMT
+recorded_with: VCR 6.1.0
