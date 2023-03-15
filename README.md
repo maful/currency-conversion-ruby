@@ -3,6 +3,8 @@
 [![Test](https://github.com/maful/currency-conversion-ruby/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/maful/currency-conversion-ruby/actions/workflows/test.yml)
 [![Gem Version](https://badge.fury.io/rb/currency-conversion-api.svg)](https://badge.fury.io/rb/currency-conversion-api)
 
+> [Libur.run](https://github.com/maful/libur.run) - Empower Your HR with Next-Gen Open Source Self-Serve Platform
+
 ## Installation
 
 Add this line to your application's Gemfile:
